@@ -20,13 +20,65 @@ To analyze quarterly product sales data across multiple products and quarters us
 
 # Step 1: Create 2D array (Rows = Products, Columns = Quarters)
 <<Enter your code>>
+
+import numpy as np  
+
+# Create 2D sales array (3 Products × 4 Quarters)  
+sales = np.array([
+    [120, 150, 170, 200],
+    [90, 110, 130, 160],
+    [150, 140, 180, 210]
+])
+
+print("Quarterly Sales Data:")  
+print(sales)  
+
 # Step 2: Calculate Aggregations and Summary Statistics
 <<Enter your code>>
+
+
+# Calculate product-wise totals
+product_totals = np.sum(sales, axis=1)  
+
+# Calculate quarter-wise totals
+quarter_totals = np.sum(sales, axis=0)  
+
+# Calculate overall statistics
+average_sales = np.mean(sales)  
+highest_sales = np.max(sales)  
+lowest_sales = np.min(sales)  
+
 # Step 3: Display Summary
 <<Enter your code>>
 
+
+print("\nProduct-wise Sales Totals:")  
+print(product_totals)  
+
+print("\nQuarter-wise Sales Totals:")  
+print(quarter_totals)  
+
+print("\nOverall Average Sales:", average_sales)  
+print("Highest Sales:", highest_sales)  
+print("Lowest Sales:", lowest_sales)  
+
 ## Output
 
+
+Quarterly Sales Data:
+[[120 150 170 200]  
+ [ 90 110 130 160]  
+ [150 140 180 210]]  
+
+Product-wise Sales Totals:
+[640 490 680]  
+
+Quarter-wise Sales Totals:
+[360 400 480 570]  
+
+Overall Average Sales: 150.83333333333334  
+Highest Sales: 210  
+Lowest Sales: 90  
 
 ## Result
 
